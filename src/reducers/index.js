@@ -20,18 +20,8 @@ const tasks = handleActions({
   },
 }, {});
 
-const newTaskText = handleActions({
-  [actions.addTask]() {
-    return '';
-  },
-  [actions.updateNewTaskText](state, { payload: { text } }) {
-    return text;
-  },
-}, '');
-
 export default combineReducers({
   form: formReducer,
   tasks,
-  newTaskText,
 });
 // END
