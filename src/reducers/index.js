@@ -1,6 +1,7 @@
 import _ from 'lodash'; // eslint-disable-line
 import { combineReducers } from 'redux'; // eslint-disable-line
 import { handleActions } from 'redux-actions'; // eslint-disable-line
+import { reducer as formReducer } from 'redux-form'; // eslint-disable-line
 import * as actions from '../actions'; // eslint-disable-line
 
 // BEGIN
@@ -29,6 +30,7 @@ const newTaskText = handleActions({
 }, '');
 
 export default combineReducers({
+  form: formReducer,
   tasks,
   newTaskText,
 });

@@ -8,6 +8,7 @@
     "redux-actions": "*",
     "reselect": "*",
     "react-redux": "*",
+    "redux-form": "*",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14"

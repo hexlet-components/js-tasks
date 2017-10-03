@@ -37,7 +37,8 @@ export default class TasksList extends React.Component {
   }
 
   renderFilter([state, name]) {
-    return this.state.activeFilter === state ? name : <a href="#" onClick={() => this.applyFilter(state)}>{name}</a>;
+    return this.state.activeFilter === state ?
+      name : <a key={state} href="#" onClick={() => this.applyFilter(state)}>{name}</a>;
   }
 
   render() {

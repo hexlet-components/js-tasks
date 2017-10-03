@@ -1,21 +1,22 @@
 import React from 'react'; // eslint-disable-line
+import { Field, reduxForm } from 'redux-form'; // eslint-disable-line
 
-export default class NewTaskForm extends React.Component {
-  addTask = (e) => {
-    e.preventDefault();
-    this.props.addTask({ text: this.props.newTaskText });
+class NewTaskForm extends React.Component {
+  addTask = (values) => {
+    this.props.addTask(values);
+    this.props.reset();
   }
-  updateNewTaskText = e => this.props.updateNewTaskText({ text: e.target.value })
 
   render() {
-    const { newTaskText } = this.props;
-
-    return <form action="" className="form-inline" onSubmit={this.addTask}>
+    return <form action="" className="form-inline" onSubmit={this.props.handleSubmit(this.addTask)}>
       <div className="form-group mx-3">
-        <input type="text" required
-          value={newTaskText} onChange={this.updateNewTaskText} />
+        <Field name="text" required component="input" type="text" />
       </div>
       <button type="submit" className="btn btn-primary btn-sm">Add</button>
     </form>;
   }
 }
+
+export default reduxForm({
+  form: 'newTask',
+})(NewTaskForm);
