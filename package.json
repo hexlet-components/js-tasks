@@ -1,0 +1,32 @@
+{
+  "name": "js-tasks",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "lodash": "*",
+    "redux": "*",
+    "redux-actions": "*",
+    "reselect": "*",
+    "react-redux": "*",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+  },
+  "devDependencies": {
+    "jest-environment-jsdom-latest": "*",
+    "react-test-renderer": "*",
+    "enzyme": "*",
+    "enzyme-to-json": "*",
+    "enzyme-adapter-react-16": "*",
+    "enzyme-to-json": "*"
+  },
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom-latest",
+    "eject": "react-scripts eject"
+  }
+}

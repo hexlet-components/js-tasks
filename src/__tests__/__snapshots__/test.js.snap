@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Store 1`] = `
+<div
+  class="col-5"
+>
+  <form
+    action=""
+    class="form-inline"
+  >
+    <div
+      class="form-group mx-sm-3"
+    >
+      <input
+        required=""
+        type="text"
+        value=""
+      >
+        
+      </input>
+    </div>
+    <button
+      class="btn btn-primary btn-sm"
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Store 2`] = `
+<div
+  class="col-5"
+>
+  <form
+    action=""
+    class="form-inline"
+  >
+    <div
+      class="form-group mx-sm-3"
+    >
+      <input
+        required=""
+        type="text"
+        value="na-na"
+      >
+        
+      </input>
+    </div>
+    <button
+      class="btn btn-primary btn-sm"
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Store 3`] = `
+<div
+  class="col-5"
+>
+  <form
+    action=""
+    class="form-inline"
+  >
+    <div
+      class="form-group mx-sm-3"
+    >
+      <input
+        required=""
+        type="text"
+        value=""
+      >
+        
+      </input>
+    </div>
+    <button
+      class="btn btn-primary btn-sm"
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+  <div
+    class="row"
+  >
+    <div
+      class="col-10"
+    >
+      na-na
+    </div>
+    <div
+      class="col"
+    >
+      <a
+        href="#"
+      >
+        x
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Store 4`] = `
+<div
+  class="col-5"
+>
+  <form
+    action=""
+    class="form-inline"
+  >
+    <div
+      class="form-group mx-sm-3"
+    >
+      <input
+        required=""
+        type="text"
+        value="another task"
+      >
+        
+      </input>
+    </div>
+    <button
+      class="btn btn-primary btn-sm"
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+  <div
+    class="row"
+  >
+    <div
+      class="col-10"
+    >
+      na-na
+    </div>
+    <div
+      class="col"
+    >
+      <a
+        href="#"
+      >
+        x
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Store 5`] = `
+<div
+  class="col-5"
+>
+  <form
+    action=""
+    class="form-inline"
+  >
+    <div
+      class="form-group mx-sm-3"
+    >
+      <input
+        required=""
+        type="text"
+        value=""
+      >
+        
+      </input>
+    </div>
+    <button
+      class="btn btn-primary btn-sm"
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+  <div
+    class="row"
+  >
+    <div
+      class="col-10"
+    >
+      na-na
+    </div>
+    <div
+      class="col"
+    >
+      <a
+        href="#"
+      >
+        x
+      </a>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-10"
+    >
+      another task
+    </div>
+    <div
+      class="col"
+    >
+      <a
+        href="#"
+      >
+        x
+      </a>
+    </div>
+  </div>
+</div>
+`;

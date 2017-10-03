@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "lodash": "*",
+    "redux": "*",
+    "react": "*",
+    "react-redux": "*"
+  },
+  "jest": {
+    "testEnvironment": "jsdom-latest",
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
+  "scripts": {
+    "test": "jest --colors"
+  }
+}
