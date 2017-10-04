@@ -11,6 +11,8 @@
     "redux-form": "*",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-router": "*",
+    "react-router-dom": "*",
     "react-scripts": "1.0.14"
   },
   "devDependencies": {

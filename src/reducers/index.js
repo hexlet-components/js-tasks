@@ -9,6 +9,10 @@ const tasks = handleActions({
   [actions.addTask](state, { payload: { task } }) {
     return { ...state, [task.id]: task };
   },
+  [actions.editTask](state, { payload: { task } }) {
+    const currentTask = state[task.id];
+    return { ...state, [task.id]: { ...currentTask, ...task } };
+  },
   [actions.removeTask](state, { payload: { id } }) {
     return _.omit(state, id);
   },

@@ -1,7 +1,7 @@
 import React from 'react'; // eslint-disable-line
+import { Link } from 'react-router-dom'; // eslint-disable-line
 
 const filters = [['all', 'all'], ['active', 'active'], ['finished', 'finished']];
-const renderTask = ({ state, text }) => (state === 'finished' ? <s>{text}</s> : text);
 
 export default class TasksList extends React.Component {
   state = { activeFilter: 'all' };
@@ -26,11 +26,11 @@ export default class TasksList extends React.Component {
     const tasks = filter === 'all' ? rawTasks : rawTasks.filter(t => t.state === filter);
 
     return <ul className="list-group">
-      {tasks.map(task =>
-        <li key={task.id} className="list-group-item d-flex justify-content-end">
-          <a href="#" onClick={this.toggleTaskState(task.id)}>-</a>
-          <div className="mr-auto">{renderTask(task)}</div>
-          <a href="#" onClick={this.removeTask(task.id)}>x</a>
+      {tasks.map(({ id, text, state }) =>
+        <li key={id} className="list-group-item d-flex justify-content-end">
+          <a href="#" className="mr-3" onClick={this.toggleTaskState(id)}>-</a>
+          <div className="mr-auto">{(state === 'finished' ? <s>{text}</s> : <Link to={`/tasks/${id}`}>{text}</Link>)}</div>
+          <a href="#" onClick={this.removeTask(id)}>x</a>
         </li>,
       )}
     </ul>;

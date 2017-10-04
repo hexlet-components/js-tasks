@@ -2,6 +2,7 @@ import React from 'react' // eslint-disable-line
 import { render } from 'react-dom' // eslint-disable-line
 import { Provider } from 'react-redux' // eslint-disable-line
 import { createStore } from 'redux' // eslint-disable-line
+import { BrowserRouter as Router } from 'react-router-dom'; // eslint-disable-line
 import reducers from './reducers';
 import App from './components/App.jsx';
 
@@ -16,7 +17,9 @@ const store = createStore(
 // BEGIN
 render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root'),
 );
