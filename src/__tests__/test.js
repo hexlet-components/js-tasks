@@ -1,3 +1,5 @@
+import 'js-polyfills/html';
+
 import React from 'react' // eslint-disable-line
 import { Provider } from 'react-redux' // eslint-disable-line
 import { createStore } from 'redux' // eslint-disable-line
