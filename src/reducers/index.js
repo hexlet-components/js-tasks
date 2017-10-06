@@ -6,15 +6,16 @@ import * as actions from '../actions'; // eslint-disable-line
 
 // BEGIN
 const tasks = handleActions({
-  [actions.addTask](state, { payload: { task } }) {
+  [actions.successAddTask](state, { payload: { task } }) {
     return { ...state, [task.id]: task };
   },
   [actions.editTask](state, { payload: { task } }) {
     const currentTask = state[task.id];
     return { ...state, [task.id]: { ...currentTask, ...task } };
   },
-  [actions.removeTask](state, { payload: { id } }) {
-    return _.omit(state, id);
+  [actions.successRemoveTask](state, { payload: { task } }) {
+    console.log(state)
+    return _.omit(state, task.id);
   },
   [actions.toggleTaskState](state, { payload: { id } }) {
     const task = state[id];

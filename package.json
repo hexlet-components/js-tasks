@@ -13,7 +13,14 @@
     "react-dom": "^16.0.0",
     "react-router": "*",
     "react-router-dom": "*",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "redux-thunk": "*",
+    "express": "*",
+    "morgan": "*",
+    "cors": "*",
+    "nodemon": "*",
+    "axios": "*",
+    "body-parser": "*"
   },
   "devDependencies": {
     "js-polyfills": "*",
@@ -22,12 +29,20 @@
     "enzyme": "*",
     "enzyme-to-json": "*",
     "enzyme-adapter-react-16": "*",
-    "enzyme-to-json": "*"
+    "enzyme-to-json": "*",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-preset-env": "*",
+    "babel-preset-flow": "*",
+    "babel-preset-stage-0": "*"
   },
   "jest": {
     "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "scripts": {
+    "babel-node": "babel-node",
+    "nodemon": "nodemon",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom-latest",
