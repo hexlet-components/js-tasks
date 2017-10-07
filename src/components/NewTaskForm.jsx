@@ -1,6 +1,6 @@
-import React from 'react'; // eslint-disable-line
-import { Field, reduxForm } from 'redux-form'; // eslint-disable-line
-import cn from 'classnames'; // eslint-disable-line
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import cn from 'classnames';
 
 // BEGIN
 class NewTaskForm extends React.Component {

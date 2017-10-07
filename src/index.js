@@ -1,9 +1,9 @@
-import React from 'react' // eslint-disable-line
-import { render } from 'react-dom' // eslint-disable-line
-import { createStore, applyMiddleware, compose } from 'redux' // eslint-disable-line
-import { Provider } from 'react-redux' // eslint-disable-line
-import thunk from 'redux-thunk'; // eslint-disable-line
-import { BrowserRouter as Router } from 'react-router-dom'; // eslint-disable-line
+import React from 'react';
+import { render } from 'react-dom';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { BrowserRouter as Router } from 'react-router-dom';
 import reducers from './reducers';
 import App from './components/App.jsx';
 

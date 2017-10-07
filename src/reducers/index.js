@@ -1,10 +1,9 @@
-import _ from 'lodash'; // eslint-disable-line
-import { combineReducers } from 'redux'; // eslint-disable-line
-import { handleActions } from 'redux-actions'; // eslint-disable-line
-import { reducer as formReducer } from 'redux-form'; // eslint-disable-line
-import * as actions from '../actions'; // eslint-disable-line
+import _ from 'lodash';
+import { combineReducers } from 'redux';
+import { handleActions } from 'redux-actions';
+import { reducer as formReducer } from 'redux-form';
+import * as actions from '../actions';
 
-// BEGIN
 const taskCreatingState = handleActions({
   [actions.addTaskRequest]() {
     return 'requested';
@@ -17,13 +16,21 @@ const taskCreatingState = handleActions({
   },
 }, 'none');
 
+const taskUpdatingState = handleActions({
+  [actions.updateTaskRequest]() {
+    return 'requested';
+  },
+  [actions.updateTaskFailure]() {
+    return 'failed';
+  },
+  [actions.updateTaskSuccess]() {
+    return 'successed';
+  },
+}, 'none');
+
 const tasks = handleActions({
   [actions.addTaskSuccess](state, { payload: { task } }) {
     return { ...state, [task.id]: task };
-  },
-  [actions.editTask](state, { payload: { task } }) {
-    const currentTask = state[task.id];
-    return { ...state, [task.id]: { ...currentTask, ...task } };
   },
   [actions.removeTaskSuccess](state, { payload: { task } }) {
     return _.omit(state, task.id);
@@ -44,6 +51,6 @@ const tasks = handleActions({
 export default combineReducers({
   form: formReducer,
   taskCreatingState,
+  taskUpdatingState,
   tasks,
 });
-// END
