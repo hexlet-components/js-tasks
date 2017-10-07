@@ -6,7 +6,7 @@ import cn from 'classnames';
 // BEGIN
 class EditTaskForm extends React.Component {
   updateTask = (values) => {
-    this.props.updateTask({ ...values, id: this.props.task.id });
+    this.props.updateTask(this.props.task.id, values);
     this.props.history.push('/');
     // this.props.reset();
   }

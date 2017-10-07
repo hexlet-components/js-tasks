@@ -38,10 +38,10 @@ export const removeTask = task => async (dispatch) => {
   }
 };
 
-export const updateTask = task => async (dispatch) => {
-  dispatch(updateTaskRequest({ id: task.id }));
+export const updateTask = (id, task) => async (dispatch) => {
+  dispatch(updateTaskRequest({ id }));
   try {
-    await axios.patch(routes.taskUrl(task.id), { task });
+    await axios.patch(routes.taskUrl(id), { task });
     dispatch(updateTaskSuccess({ task }));
   } catch (e) {
     dispatch(updateTaskFailure({ task }));
