@@ -20,6 +20,7 @@
     "cors": "*",
     "nodemon": "*",
     "axios": "*",
+    "classnames": "*",
     "body-parser": "*"
   },
   "devDependencies": {

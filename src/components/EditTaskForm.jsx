@@ -4,18 +4,18 @@ import { Field, reduxForm } from 'redux-form'; // eslint-disable-line
 
 // BEGIN
 class EditTaskForm extends React.Component {
-  editTask = (values) => {
-    this.props.editTask({ task: { ...values, id: this.props.task.id } });
+  updateTask = (values) => {
+    this.props.updateTask({ ...values, id: this.props.task.id });
     this.props.history.push('/');
     // this.props.reset();
   }
 
   render() {
-    return <form action="" className="form-inline" onSubmit={this.props.handleSubmit(this.editTask)}>
+    return <form action="" className="form-inline" onSubmit={this.props.handleSubmit(this.updateTask)}>
       <div className="form-group mx-3">
         <Field name="text" required component="input" type="text" />
       </div>
-      <button type="submit" className="btn btn-primary btn-sm">Edit</button>
+      <button type="submit" className="btn btn-primary btn-sm">Update</button>
       <Link to="/">Back</Link>
     </form>;
   }

@@ -5,17 +5,33 @@ import { reducer as formReducer } from 'redux-form'; // eslint-disable-line
 import * as actions from '../actions'; // eslint-disable-line
 
 // BEGIN
+const taskCreatingState = handleActions({
+  [actions.addTaskRequest]() {
+    return 'requested';
+  },
+  [actions.addTaskFailure]() {
+    return 'failed';
+  },
+  [actions.addTaskSuccess]() {
+    return 'successed';
+  },
+}, 'none');
+
 const tasks = handleActions({
-  [actions.successAddTask](state, { payload: { task } }) {
+  [actions.addTaskSuccess](state, { payload: { task } }) {
     return { ...state, [task.id]: task };
   },
   [actions.editTask](state, { payload: { task } }) {
     const currentTask = state[task.id];
     return { ...state, [task.id]: { ...currentTask, ...task } };
   },
-  [actions.successRemoveTask](state, { payload: { task } }) {
-    console.log(state)
+  [actions.removeTaskSuccess](state, { payload: { task } }) {
     return _.omit(state, task.id);
+  },
+  [actions.updateTaskSuccess](state, { payload: { task } }) {
+    const oldTask = state[task.id];
+    const updatedTask = { ...oldTask, ...task };
+    return { ...state, [task.id]: updatedTask };
   },
   [actions.toggleTaskState](state, { payload: { id } }) {
     const task = state[id];
@@ -27,6 +43,7 @@ const tasks = handleActions({
 
 export default combineReducers({
   form: formReducer,
+  taskCreatingState,
   tasks,
 });
 // END
