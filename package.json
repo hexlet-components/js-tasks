@@ -5,7 +5,7 @@
   "dependencies": {
     "lodash": "*",
     "redux": "*",
-    "redux-actions": "*",
+    "redux-actions": "^2",
     "reselect": "*",
     "react-redux": "*",
     "redux-form": "*",
@@ -25,28 +25,12 @@
   },
   "devDependencies": {
     "js-polyfills": "*",
-    "jest-environment-jsdom-latest": "*",
-    "react-test-renderer": "*",
-    "enzyme": "*",
-    "enzyme-to-json": "*",
-    "enzyme-adapter-react-16": "*",
-    "enzyme-to-json": "*",
-    "babel-cli": "*",
-    "babel-core": "*",
-    "babel-eslint": "*",
-    "babel-preset-env": "*",
-    "babel-preset-flow": "*",
-    "babel-preset-stage-0": "*"
-  },
-  "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "react-test-renderer": "*"
   },
   "scripts": {
-    "babel-node": "babel-node",
-    "nodemon": "nodemon",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom-latest",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   }
 }
