@@ -9,11 +9,10 @@
     "reselect": "*",
     "react-redux": "*",
     "redux-form": "*",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
+    "react": "*",
+    "react-dom": "*",
     "react-router": "*",
     "react-router-dom": "*",
-    "react-scripts": "5.0.1",
     "redux-thunk": "*",
     "express": "*",
     "morgan": "*",
@@ -24,13 +23,18 @@
     "body-parser": "*"
   },
   "devDependencies": {
-    "js-polyfills": "*",
-    "react-test-renderer": "*"
+    "vite": "*",
+    "@vitejs/plugin-react": "*",
+    "vitest": "*",
+    "jsdom": "*",
+    "@testing-library/react": "*",
+    "@testing-library/jest-dom": "*"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 import reducers from './reducers';
 import App from './components/App.jsx';
@@ -19,12 +19,11 @@ const store = createStore(
 /* eslint-enable */
 
 // BEGIN
-render(
+createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <Router>
       <App />
     </Router>
   </Provider>,
-  document.getElementById('root'),
 );
 // END
